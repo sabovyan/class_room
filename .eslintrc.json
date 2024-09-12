@@ -1,3 +1,16 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:jsx-a11y/recommended",
+    "next/typescript"
+  ],
+  "plugins": ["jsx-a11y"],
+  "rules": {
+    "complexity": "error",
+    "max-params": ["error", 2],
+    "@typescript-eslint/no-unnecessary-condition": "error",
+    "@typescript-eslint/no-floating-promises": "error",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error"
+  }
 }
