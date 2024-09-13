@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  postgres:
+    container_name: container-pg
+    image: postgres
+    hostname: localhost
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./postgres
+      o: bind
