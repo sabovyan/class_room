@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "echo 'types \n' && tsc && echo 'linting \n' && next lint",
-    "test": "echo  'no test are ready'"
+    "test": "echo  'no test are ready'",
+    "studio": "prisma studio"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.4.2",
