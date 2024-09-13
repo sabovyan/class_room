@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "echo 'types \n' && tsc && echo 'linting \n' && next lint",
+    "test": "echo  'no test are ready'",
     "generate": "drizzle-kit generate",
     "migrate": "drizzle-kit migrate",
     "studio": "drizzle-kit studio"
