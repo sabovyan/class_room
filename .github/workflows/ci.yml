@@ -3,13 +3,11 @@ name: CI
 on:
   pull_request:
     branches:
-      - master
+      - main
       - release/*
 jobs:
   build:
-    # Job name is Validation
     name: Validation
-    # This job runs on macos
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
