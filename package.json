@@ -7,10 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "echo 'types \n' && tsc && echo 'linting \n' && next lint",
-    "test": "echo  'no test are ready'",
-    "generate": "drizzle-kit generate",
-    "migrate": "drizzle-kit migrate",
-    "studio": "drizzle-kit studio"
+    "test": "echo  'no test are ready'"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
@@ -18,7 +15,6 @@
     "@simplewebauthn/server": "9.0.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "drizzle-orm": "^0.33.0",
     "lucide-react": "^0.439.0",
     "next": "14.2.10",
     "postgres": "^3.4.4",
@@ -32,7 +28,6 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/parser": "^8.5.0",
-    "drizzle-kit": "^0.24.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.10",
     "eslint-plugin-jsx-a11y": "^6.10.0",
