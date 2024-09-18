@@ -4,19 +4,7 @@ import {
   text,
   primaryKey,
 } from "drizzle-orm/sqlite-core";
-import { createClient } from "@libsql/client";
-import { drizzle } from "drizzle-orm/libsql";
 import type { AdapterAccountType } from "next-auth/adapters";
-import dotenv from "dotenv";
-
-dotenv.config({ path: ".env" });
-
-const client = createClient({
-  url: process.env.TURSO_CONNECTION_URL!,
-  authToken: process.env.TURSO_AUTH_TOKEN!,
-});
-
-export const db = drizzle(client);
 
 export const users = sqliteTable("user", {
   id: text("id")
