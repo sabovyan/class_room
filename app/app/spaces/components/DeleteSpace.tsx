@@ -7,7 +7,6 @@ import {
   DialogTrigger,
   Dialog,
   DialogContent,
-  DialogClose,
 } from "@/components/ui/dialog";
 import { deleteSpace } from "../space.action";
 import { useState } from "react";
@@ -34,7 +33,7 @@ export function DeleteSpace({ spaceId }: { spaceId: number }) {
             action={async (formData) => {
               const response = await deleteSpace(formData);
 
-              if (response.status === "error") {
+              if (response?.status === "error") {
                 return;
               }
 

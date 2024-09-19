@@ -44,7 +44,11 @@ export default async function App() {
                   </CardTitle>
                   <CardContent>{space.description}</CardContent>
                   <CardFooter className="justify-end gap-4">
-                    <Button>Edit</Button>
+                    <Link
+                      href={`/app/spaces/${space.id}/edit?name=${space.name}&description=${space.description}`}
+                    >
+                      <Button>Edit</Button>
+                    </Link>
                     <DeleteSpace spaceId={space.id} />
                   </CardFooter>
                 </Card>
