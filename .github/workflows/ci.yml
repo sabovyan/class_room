@@ -8,6 +8,7 @@ on:
     branches:
       - main
       - release/*
+
 jobs:
   build:
     name: Validation
@@ -39,14 +40,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install and Build packages and apps
+      - name: Install
         run: pnpm install
 
       - name: Code Validation
         run: pnpm lint
 
       - name: Build project
-        run: pnpm build
+        run: |
+          touch .env
+          echo "TURSO_CONNECTION_URL=${{ secrets.TURSO_CONNECTION_URL }}" >> .env
+          echo "TURSO_AUTH_TOKEN=${{ secrets.TURSO_AUTH_TOKEN }}" >> .env
+          pnpm build
 
       - name: Code tests
         run: pnpm test
