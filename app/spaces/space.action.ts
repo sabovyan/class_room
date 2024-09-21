@@ -61,7 +61,7 @@ export const addSpace = async (
     })
     .returning();
 
-  redirect("/app/spaces");
+  redirect("/spaces");
 };
 
 export const editSpace = async (formData: FormData) => {
@@ -85,7 +85,7 @@ export const editSpace = async (formData: FormData) => {
     .set({ name, description })
     .where(eq(spaces.id, validation.output.id));
 
-  redirect("/app/spaces");
+  redirect("/spaces");
 };
 
 export const deleteSpace = async (formData: FormData) => {

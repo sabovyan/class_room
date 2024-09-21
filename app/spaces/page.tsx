@@ -29,7 +29,7 @@ export default async function App() {
       <div className="mb-6 flex items-center justify-between">
         <h1 className="text-2xl font-bold">Spaces</h1>
 
-        <Link href="/app/spaces/new">
+        <Link href="/spaces/new">
           <Button>Add Space</Button>
         </Link>
       </div>
@@ -40,12 +40,12 @@ export default async function App() {
               <li key={space.id}>
                 <Card>
                   <CardTitle className="p-4">
-                    <Link href={`/app/spaces/${space.id}`}>{space.name}</Link>
+                    <Link href={`/spaces/${space.id}`}>{space.name}</Link>
                   </CardTitle>
                   <CardContent>{space.description}</CardContent>
                   <CardFooter className="justify-end gap-4">
                     <Link
-                      href={`/app/spaces/${space.id}/edit?name=${space.name}&description=${space.description}`}
+                      href={`/spaces/${space.id}/edit?name=${space.name}&description=${space.description}`}
                     >
                       <Button>Edit</Button>
                     </Link>
