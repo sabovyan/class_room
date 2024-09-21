@@ -21,7 +21,7 @@ export default async function SignIn() {
     <form
       action={async () => {
         "use server";
-        await signIn("google", { redirectTo: "/app" });
+        await signIn("google", { redirectTo: "/" });
       }}
     >
       <button type="submit">Signin with Google</button>
